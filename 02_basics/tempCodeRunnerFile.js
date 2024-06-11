@@ -1,0 +1,1 @@
+console.log(calculateCartPrice(200, 400, 500, 2000))
