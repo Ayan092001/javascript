@@ -1,6 +1,4 @@
 
-
-
 const form = document.querySelector('form');
 // this usecase will give you empty
 // const height = parseInt(document.querySelector('#height').value)
@@ -19,14 +17,14 @@ form.addEventListener('submit', function (e) {
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     //show the result
-    results.innerHTML = `<span>${bmi}</span> <br>`;
-    // if(bmi<18.6){
-    //   results.innerHTML = `<span>You are under weight<span>`;
-    // }else if(bmi>=18.6 && bmi<=24.9){
-    //   results.innerHTML = `<span>You are normal weight<span>`;
-    // }else{
-    //   results.innerHTML = `<span>You are over weight<span>`;
-    // }
+    results.innerHTML = `<span>${bmi}</span>`;
+    if(bmi<18.6){
+      results.innerHTML = `<span>${bmi} You are under weight<span>`;
+    }else if(bmi>=18.6 && bmi<=24.9){
+      results.innerHTML = `<span>${bmi} You are normal weight<span>`;
+    }else{
+      results.innerHTML = `<span>${bmi} You are over weight<span>`;
+    }
   }
 });
 
